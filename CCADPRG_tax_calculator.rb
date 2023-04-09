@@ -124,15 +124,15 @@ def setTaxVal(income)
   if income <= 20_833
     0
   elsif income <= 33_332
-    0.08565634749 * (income - 20_833)
+    0.15 * (income - 20_833)
   elsif income <= 66_666
-    1_875 + (income - 33_333) * 0.20
+    1_875 + ((income - 33_333) * 0.20)
   elsif income <= 166_666
-    8_541.8 + (income - 66_667) * 0.25
+    8_541.8 + ((income - 66_667) * 0.25)
   elsif income <= 666_666
-    33_541.8 + (income - 166_667) * 0.30
+    33_541.8 + ((income - 166_667) * 0.30)
   else
-    183_541.8 + (income - 666_667) * 0.35
+    183_541.8 + ((income - 666_667) * 0.35)
   end
 end
 
