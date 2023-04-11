@@ -149,11 +149,13 @@ end
 # calculate tax
 calculate_tax = proc {
   income_val = income.get.to_f
-  tax_amount_val = setTaxVal(income_val)
+
   SSS_contribution = setSSSContribution(income_val)
   PhilHealth_contribution = setPhilHealthContribution(income_val)
   Pagibig_Contribution = setPagIbig(income_val)
   Total_contribution = SSS_contribution + PhilHealth_contribution + Pagibig_Contribution
+  tax_amount_val = setTaxVal(income_val-Total_contribution)
+
   net_pay_val = income_val - tax_amount_val - SSS_contribution - PhilHealth_contribution - Pagibig_Contribution
   tax_amount.text('%.2f' % tax_amount_val)
   net_pay.text('%.2f' % net_pay_val)
