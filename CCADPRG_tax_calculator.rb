@@ -1,5 +1,10 @@
 # frozen_string_literal: true
-
+# ********************
+#   Name: BAUTISTA, SAMANTHA MICHAELA ORIGEN,BORROMEO, MATTHEW THEODORE TUVILLA,
+#         ESTRERA, DAVID JOSHUA SINEN,GONZALES, BRYANT KIMM CUSTODIO
+#   Language:Ruby
+#   Paradigm:procedural, object-oriented, and functional programming
+#   ********************
 gem 'tk'
 require 'tk'
 root = TkRoot.new { title 'Tax Calculator' }
